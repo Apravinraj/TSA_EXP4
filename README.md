@@ -62,7 +62,7 @@ plt.show()
 train_size = int(len(X) * 0.8)
 X_train, X_test = X[:train_size], X[train_size:]
 
-# Fit ARMA(1,1) model to the 'WaterDepth' data to estimate parameters
+# Fit ARMA(1,1) model to the  data to estimate parameters
 arma11_model = ARIMA(X_train, order=(1, 0, 1)).fit()
 phi1_arma11 = arma11_model.params['ar.L1']
 theta1_arma11 = arma11_model.params['ma.L1']
